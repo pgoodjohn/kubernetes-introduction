@@ -1,0 +1,32 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    name: example-app
+  name: example-app
+spec:
+  template:
+    metadata:
+      labels:
+        name: example-app
+    spec:
+      volumes:
+        - name: source
+          hostPath:
+            path: /Users/pietrobongiovanni/workspace/personal/kubernetes-introduction/
+      containers:
+        - name: example-app
+          image: golang:1.9.2-alpine3.6
+          workingDir: /source/src
+          command: ["go", "run", "main.go"]
+          ports:
+            - containerPort: 8080
+              name: go-server
+              protocol: TCP
+          volumeMounts:
+            - name: source
+              mountPath: /source
+          env:
+          - name: GOPATH
+            value: /source
