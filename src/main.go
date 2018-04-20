@@ -16,6 +16,12 @@ func main() {
 		fmt.Println("Recorded Visit to /")
     })
 
+    http.HandleFunc("/hello-world", func (w http.ResponseWriter, r *http.Request){
+        w.WriteHeader(http.StatusOK)
+        fmt.Println("Recorded Visit to /hello-world")
+        w.Write([]byte("{\"result\":\"Hello DigitalOcean #DOMeetup\"}"))
+    })
+
     http.HandleFunc("/crash", func(w http.ResponseWriter, r *http.Request) {
         w.WriteHeader(http.StatusOK)
 

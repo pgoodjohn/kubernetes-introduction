@@ -1,0 +1,13 @@
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-app
+spec:
+  rules:
+    - host: example.meetup.com
+      http:
+        paths:
+          - backend:
+              serviceName: example-app
+              servicePort: 80
