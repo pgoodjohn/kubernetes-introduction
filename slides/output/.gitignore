@@ -1,4 +1,1 @@
-*
-!.gitignore
-!reveal.js/
-!img/
+*.html
