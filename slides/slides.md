@@ -45,7 +45,7 @@ Kubernetes is an open-source system for automating deployment, scaling, and mana
 
 ## What is K8S?
 
-Something about microservice archiutectures and simplicity blob blabla.
+It makes easy to bbuild applications based on microservices
 
 ---
 
@@ -108,6 +108,8 @@ It's backed by big companies, yet still open source!
 
 ## Why should you care about Kubernetes?
 
+It's a bible for open source projects and communities
+
 ---
 
 # Let's get into the weeds of it
@@ -117,3 +119,64 @@ It's backed by big companies, yet still open source!
 ## How does it work?
 
 ![](img/architecture-diagram.png)
+
+---
+
+## Nodes
+
+* Master/Slave(s) Nodes
+* Physical or Virtual Machines
+
+---
+
+## Pods
+
+* Basic building blocks of K8S
+* Docker Container(s)
+* Horizontal scalability
+
+---
+
+## Pod Controllers
+
+* Deployments
+* Stateful Sets
+* Daemon Controllers
+
+---
+
+## Pod Lifecycle
+
+* Pod failure
+* Pod restarts
+* Deployments
+
+---
+
+## Services
+
+* Exposing Pods to HTTP traffic (internal)
+
+---
+
+## Ingresses
+
+* Exposing Services to external HTTP traffic
+
+---
+
+## More stuff
+
+* K8S Offer a lot more
+    * Cronjobs (1.8)
+    * Secret management
+    * Automated rollouts and rollbacks
+    * Storage orchestration
+
+---
+
+# Demo!
+
+---
+
+# Q&A?
